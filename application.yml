@@ -8,8 +8,8 @@ microservices:
   payment-service:
     endpoints:
       fetchPaymentById:
-        uri: http://PAYMENT-SERVICE/api/v1/payment
+        uri: http://PAYMENT-SERVICE/api/v1/payment/
   user-service:
     endpoints:
       fetchUserById:
-        uri: http://USER-SERVICE/api/v1/user
+        uri: http://USER-SERVICE/api/v1/user/
