@@ -15,4 +15,4 @@ microservices:
         uri: http://USER-SERVICE/api/v1/user/
 
 test:
-  value: HELLO-WORLD1
+  value: HELLO-WORLD-JAVA
