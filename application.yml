@@ -20,3 +20,12 @@ test:
 logging:
   file:
     name: /Users/dhanesh/ecom-app-logs/ecom-app.log
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
