@@ -22,25 +22,3 @@ logging:
     name: /Users/dhanesh/ecom-app-logs/ecom-app.log
   pattern:
     level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: always
-  tracing:
-    sampling:
-      probability: 1.0
-  metrics:
-    distribution:
-      percentiles-histogram:
-        http:
-          server:
-            requests: true
-  endpoint:
-    web:
-      exposure:
-        include: prometheus
