@@ -22,8 +22,8 @@ test:
 logging:
   file:
     name: /Users/dhanesh/ecom-app-logs/ecom-app.log
-  pattern:
-    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
+  # pattern:
+  #   level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
 
 management:
   health:
@@ -40,14 +40,14 @@ management:
     sampling:
       probability: 1.0
   metrics:
-    distribution:
-      percentiles-histogram:
-        http:
-          server:
-            requests: true
+    # distribution:
+    #   percentiles-histogram:
+    #     http:
+    #       server:
+    #         requests: true
   endpoint:
-    web:
-      exposure:
-        include: prometheus
+    # web:
+    #   exposure:
+    #     include: prometheus
     health:
       show-details: always
