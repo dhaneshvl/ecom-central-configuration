@@ -19,4 +19,4 @@ test:
 
 logging:
   file:
-    name: /Users/dhanesh/ecom-app-logs/ecom-log
+    name: /Users/dhanesh/ecom-app-logs/ecom-app.log
