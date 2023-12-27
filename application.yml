@@ -15,7 +15,7 @@ microservices:
         uri: http://USER-SERVICE/api/v1/user/
 
 test:
-  value: HELLO-WORLD-JAVA
+  value: HELLO-WORLD-JAVA-1
 
 logging:
   file:
