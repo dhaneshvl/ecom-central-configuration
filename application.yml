@@ -1,18 +1,18 @@
+server:
+  port: 8080
+
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 
-
 microservices:
   payment-service:
     endpoints:
-      fetchPaymentById:
-        uri: http://PAYMENT-SERVICE/api/v1/payment/
+      fetchPaymentById: http://PAYMENT-SERVICE/api/v1/payment/
   user-service:
     endpoints:
-      fetchUserById:
-        uri: http://USER-SERVICE/api/v1/user/
+      fetchUserById: http://USER-SERVICE/api/v1/user/
 
 test:
   value: HELLO-WORLD-JAVA-1
@@ -20,6 +20,8 @@ test:
 logging:
   file:
     name: /Users/dhanesh/ecom-app-logs/ecom-app.log
+  pattern:
+    level: '%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]'
 
 management:
   endpoints:
@@ -29,3 +31,16 @@ management:
   endpoint:
     health:
       show-details: always
+  tracing:
+    sampling:
+      probability: 1.0
+  metrics:
+    distribution:
+      percentiles-histogram:
+        http:
+          server:
+            requests: true
+  endpoint:
+    web:
+      exposure:
+        include: prometheus
