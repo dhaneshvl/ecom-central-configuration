@@ -16,3 +16,7 @@ microservices:
 
 test:
   value: HELLO-WORLD-JAVA
+
+logging:
+  file:
+    name: /Users/dhanesh/ecom-app-logs/ecom-log
